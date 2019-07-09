@@ -1,0 +1,20 @@
+﻿Sagan om Snövit - the story
+
+
+Index
+
+1 Snövit (snovit)
+    Fortsättning på den vanliga sagan
+
+2. Drottningen (drottning)
+    Ormspelet
+    Bekämpa ormar - brickspelet: https://developer.mozilla.org/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it
+
+
+3. Apple
+    Apples berättelse, följer Snövit men med Apples synvinkel
+
+
+
+ 
+

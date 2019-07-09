@@ -1,0 +1,160 @@
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Interaktiv saga">
+    <meta name="author" content="Erica Hsu">
+    <title>Brick Game</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/brick.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+    <!-- <script type="text/javascript" src="js/brick-game.js"></script> -->
+</head>
+
+<body>
+    <div class="tillbaka">
+        <a class="tillbaka" href="drottning.html#after-snake">Tillbaka till drottningen</a>
+    </div>
+    <header>
+        <div class="sagotitel sagan">
+            <h1>Bekämpning av ohyra</h1>
+        </div>
+    </header>
+
+    <div class="box">
+        <p class="instruction">Instruktioner för spelet: </p>
+    </div>
+
+    <!-- Spelarea renderad i game.js -->
+
+    <div class="gameContainer">
+        <!-- <canvas id="gameCanvas"></canvas> -->
+        <canvas id="gameCanvas" width="800" height="550"></canvas>
+    </div>
+
+
+    <!-- JavaScript-logik för spelet -->
+    <script>
+        // Game Area
+        var canvas = document.getElementById("gameCanvas");
+        var ctx = canvas.getContext('2d');
+
+        // Ball
+        var x = canvas.width / 2;
+        var y = canvas.height - 30;
+        var dx = 5;
+        var dy = -2;
+        var ballRadius = 10;
+
+        // Paddle
+        var paddleHeight = 20;
+        var paddleWidth = 150;
+        var paddleX = (canvas.width - paddleWidth) / 2;
+        var rightPressed = false;
+        var leftPressed = false;
+
+        function draw() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            drawBall();
+            drawPaddle();
+
+            x += dx;
+            y += dy;
+
+            // Bounce off top or bottom edge
+            if (y + dy > canvas.height - ballRadius || y + dy < ballRadius) {
+                dy = -dy;
+            }
+
+            // Bounce off the left or right edge
+            if (x + dx > canvas.width - ballRadius || x + dx < ballRadius) {
+                dx = -dx;
+            }
+
+            // Move paddle
+            if (rightPressed && paddleX < canvas.width - paddleWidth) {
+                paddleX += 7;
+            }
+            else if (leftPressed && paddleX > 0) {
+                paddleX -= 7;
+            }
+        }
+
+        function drawBall() {
+            ctx.beginPath();
+            ctx.arc(x, y, ballRadius, 0, Math.PI * 2, false);
+            ctx.fillStyle = "#ff0000";
+            ctx.fill();
+            ctx.closePath();
+        }
+
+        function drawPaddle() {
+            ctx.beginPath();
+            ctx.rect(paddleX, canvas.height - paddleHeight, paddleWidth, paddleHeight);
+            ctx.fillStyle = "#8B4513";
+            ctx.fill();
+            ctx.closePath();
+        }
+
+        document.addEventListener("keydown", keyDownHandler, false);
+        document.addEventListener("keyup", keyUpHandler, false);
+
+        function keyDownHandler(e) {
+            if (e.keyCode == 39) {
+                rightPressed = true;
+            }
+            else if (e.keyCode == 37) {
+                leftPressed = true;
+            }
+        }
+
+        function keyUpHandler(e) {
+            if (e.keyCode == 39) {
+                rightPressed = false;
+            }
+            else if (e.keyCode == 37) {
+                leftPressed = false;
+            }
+        }
+
+
+
+        setInterval(draw, 10);
+
+    </script>
+
+    <script>
+
+
+        var canvas = document.getElementById("gameCanvas");
+        var ctx = canvas.getContext("2d");
+
+
+        // The red ball
+        ctx.beginPath();
+        ctx.rect(20, 40, 50, 50);
+        ctx.strokeStyle = "rgba(0, 0, 255, 0.5)";
+        ctx.fillStyle = "red";
+        ctx.fill();
+        ctx.closePath();
+
+        // Paddle
+        var paddleHeight = 10;
+        var paddleWidth = 75;
+        var paddleX = (canvas.width - paddleWidth) / 2;
+
+        function drawPaddle() {
+            ctx.beginPath();
+            ctx.rect(paddleX, canvas.height - paddleHeight, paddleWidth, paddleHeight);
+            ctx.fillStyle = "#8B4513";
+            ctx.fill();
+            ctx.closePath();
+        }
+    </script>
+
+    <footer>
+        <p>Skapat av Erica Hsu ~ november 2018</p>
+    </footer>
+</body>
+
+</html>

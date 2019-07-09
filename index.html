@@ -1,0 +1,136 @@
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Interaktiv saga">
+    <meta name="author" content="Erica Hsu">
+    <title>Sagan om Snövit - START</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+    <script type="text/javascript" src="js/logic.js"></script>
+</head>
+
+<body>
+    <div class="tillbaka">
+        <a class="tillbaka" href="index.html"></a>
+    </div>
+    <header>
+        <div class="sagotitel sagan">
+            <h1>Sagan om Snövit och de sju dvärgarna</h1>
+            <h2>~ eller sagan om Snövits äpple</h2>
+        </div>
+    </header>
+
+    <main>
+        <p>Det var en gång ett äpple som hette Apple och som bodde i ett slott. Eller rättare sagt, Apple hängde i ett
+            äppelträd utanför en hytt i ett av tornen till slottet. Där hängde det lilla röda äpplet med några stänk av
+            gult tillsammans med ett tiotal andra små rödgula äpplen och solade sig varje dag. När de blev rastlösa
+            lekte de kurragömma med varandra.</p>
+
+        <p class="instruction">Kan du hitta Apple? Klicka på äpplena och se vad som händer!</p>
+
+        <div class="apples">
+            <a id="A01" href="#sagan" onclick=removeApple('A01')><img class="applebild" src="images/apple.png" alt="Äpple"></a>
+            <a id="A02" href="#sagan" onclick=removeApple('A02')><img class="applebild" src="images/apple.png" alt="Äpple"></a>
+            <a id="A03" href="#sagan" onclick=removeApple('A03')><img class="applebild" src="images/apple.png" alt="Äpple"></a>
+            <a id="A04" href="#sagan" onclick=removeApple('A04')><img class="applebild" src="images/apple.png" alt="Äpple"></a>
+            <a id="A05" href="#sagan" onclick=changeApple()><img id="A5" class="applebild" src="images/apple.png" alt="Äpple"></a>
+            <a id="A06" href="#sagan" onclick=removeApple('A06')><img class="applebild" src="images/apple.png" alt="Äpple"></a>
+            <a id="A07" href="#sagan" onclick=removeApple('A07')><img class="applebild" src="images/apple.png" alt="Äpple"></a>
+            <div id="appletext" class="appletext"></div>
+        </div>
+
+        <p>Apples äppelträd sköttes av en flicka som hette Snövit. Hon hette så eftersom hennes hy var vit som snö,
+            fast hon var inte död, eller vampyr. Hon hade hår svart som ebenholtz och läppar röda som blod, så hon
+            behövde aldrig sminka sig.</p>
+
+        <p>Hur som helst, Snövits pappa var kungen och Snövits mamma, den förra drottningen, var däremot död. Kungen
+            hade gift om sig med en ny kvinna, och den nya drottningen var lika vacker som hon var ond. Hennes hjärta var
+            säkert mörkt och hårt som granit. Ja, säker kan man aldrig vara, för ingen har någonsin sett hennes hjärta.</p>
+
+        <p>Det var på grund av att drottningen var ond, och inte för att Snövit inte var hennes riktiga dotter, som
+            drottningen behandlade prinsessan som en slavflicka.</p>
+
+        <p class="instruction">Klicka på knapparna för att se Snövits arbetsdans!</p>
+        <button class="dansknapp" id="R1" onclick=slideToRight('R1')>Höger</button>
+        <button class="dansknapp" id="T1" onclick=turnLeft('T1')>Vänd</button>
+        <button class="dansknapp" id="L1" onclick=slideToLeft('L1')>Vänster</button>
+        <button class="dansknapp" id="T2" onclick=turnToBack('T2')>Vänd</button>
+        <button class="dansknapp" id="R2" onclick=slideToRight('R2')>Höger</button>
+        <button class="dansknapp" id="T3" onclick=turnLeft('T3')>Vänd</button>
+        <button class="dansknapp" id="L2" onclick=slideToLeft('L2')>Vänster</button>
+
+        <div id="container" class="container">
+            <div id="snovit" class="snovit"><img id="snovit-poor" src="images/snowhite-poor.jpg" alt="Snövit i trasiga kläder"></div>
+        </div>
+
+        <p>Snövit fick bo i ett litet rum i ett av tornen till slottet och från morgon till kväll fick hon jobba hårt
+            med hushållsarbete. Som ni ser så fick hon arbeta så hårt att hennes röda läppar försvann (fast ingen i den
+            här berättelsen har någon mun, förutom dvärgarna och häxan, och ja några till kanske). Bland annat fick hon
+            dra upp vatten från en brunn för att tvätta, skura golv, diska, laga mat och ja vad man nu använder vatten
+            till. Vattna blommor och äppelträd naturligtvis. Varje dag plockade hon äpplen för att laga äppelpaj, till
+            sig själv och till alla andra utom drottningen, för Snövit gillade inte drottningen.</p>
+
+        <p>Den vackra men elaka drottningen hade ett problem. Eller hon hade flera problem egentligen: till exempel
+            visste hon inte var hon hade gjort av med kungen, vilket var dumt, eftersom han var den ende som gillade
+            henne. Människor tyckte inte om drottningen, för att hon var en häxa. Häxor gillas inte, eftersom de ju är
+            läskiga. Det var förstås inte så att man visste om att drottningen var en häxa, men man tyckte inte om
+            henne ändå, på grund av hennes hårda och mörka hjärta, som märk väl ingen hade sett.</p>
+
+        <p class="instruction">Hovra över drottningen för att se hennes riktiga jag.</p>
+
+        <div class="drottningen"></div>
+
+        <p>Det största problemet drottningen hade var hennes dåliga självkänsla och bekräftelsebehov. Kungen hade gjort
+            en bra uppgift med att bekräfta hennes ego, tills han försvann en dag efter en meningsskiljaktighet med
+            drottningen i en fråga om Snövit. Till sin tröst hade drottningen ett magiskt föremål som på ett mystiskt
+            sätt kommit till hennes ägo på hennes artonde födelsedag: den allvetande magiska spegeln (i alla fall när
+            det gällde skönhet och mode). </p>    
+            
+        <p class="instruction">Vad dyker upp om man låter muspekaren ställa sig på spegeln?</p>
+
+        <div class="fade">
+            <img class="botten" src="images/mirror-face.jpg" alt="Magisk spegel">
+            <img class="topp" src="images/mirror.png" alt="Magisk spegel med ansikte">
+        </div>        
+
+        <p>Varje morgon ställde sig drottningen framför sin spegel och frågade (samma fråga varenda dag):</p>
+
+        <pre class="spegel-text">
+            Spegel, spegel på väggen där, 
+                    säg mig vem som skönast i landet är!</pre>
+
+        <p>Av frågan att döma kan vi förstå att spegeln hängde på en vägg och att drottningen bara tävlade med de som
+            bodde i det egna landet. Hon hade alltså inget intresse av grannländerna. Vi kan anta att det bara var
+            kvinnor som var hennes medtävlare, men det framgår inte helt klart av hennes fråga. Däremot brukar
+            adjektivet <em>skönast</em> sällan användas om män, i alla fall när det gäller utseende. "Den skönaste
+            mannen" syftar snarare på karaktären, men det är ganska klart att det var inte det drottningen var
+            intresserad av att veta.</p>
+
+        <p id="spegelval" class="instruction"> Vad svarade spegeln?</p>
+        <p class="instruction">Välj en av speglarna och klicka på den för att gå vidare!</p>
+
+        <div class="spegel-alt">
+            <a href="drottning.html">
+                <figure class="rad spegel-drottning"></figure>
+            </a>
+            <a href="snovit.html">
+                <figure class="rad spegel-snovit"></figure>
+            </a>
+            <a href="apple.html">
+                <figure class="rad spegel-apple"></figure>
+            </a>
+        </div>
+    </main>
+
+    <!-- Inget mellanrum mellan main och footer:  https://teamtreehouse.com/community/how-do-i-remove-white-space-between-header-section-footer -->
+    <footer>
+        <p>Skapat av Erica Hsu ~ oktober 2018</p>
+    </footer>
+</body>
+
+</html>
+
+
+

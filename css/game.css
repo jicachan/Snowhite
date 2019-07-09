@@ -1,0 +1,38 @@
+/* ----------------- */
+/* --- Ormspelet --- */
+/* ----------------- */
+
+canvas {
+    display: block;
+    margin: 20px auto;
+    border: 5px solid #6b0099;
+    border-radius: 20px;
+    background-color: white;
+}
+
+button {
+    font-size: 2em;
+    background-color: #590080;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.reset {
+    display: block;
+    margin: 20px auto;
+    background-color: #30e858;
+}
+
+.stopp {
+    background-color: red;
+}
+
+.knappar {       
+    display: block;
+    margin: auto;
+    width: 800px;
+    text-align: center;
+}

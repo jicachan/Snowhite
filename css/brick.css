@@ -1,0 +1,28 @@
+/* ------------------- */
+/* --- Brickspelet --- */
+/* ------------------- */
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+canvas {
+    background: white;
+    display: block;
+    margin: 0 auto;
+    /* height: 550px;         */
+    /* width: 600px; */
+}
+
+
+
+.gameContainer {
+    margin: 0 auto;
+    margin-bottom: 20px;
+    border: 3px solid #6b0099;
+    width: 800px;
+    height: 550px;
+}
+
+

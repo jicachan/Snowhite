@@ -1,0 +1,59 @@
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Interaktiv saga">
+    <meta name="author" content="Erica Hsu">
+    <title>Snake Game</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/game.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+    <script type="text/javascript" src="js/snake-game.js"></script>
+</head>
+
+<body onload="startGame()">
+    <div class="tillbaka">
+        <a class="tillbaka" href="drottning.html#after-snake">Tillbaka till drottningen</a>
+    </div>
+    <header>
+        <div class="sagotitel sagan">
+            <h1>Ormar i träden</h1>
+        </div>
+    </header>
+
+    <div class="box">
+        <p class="instruction">Håll nere <strong>knapparna</strong> för att förflytta Apple mellan ormarna och träden. <strong>Piltangenterna</strong> fungerar också för att styra Apple. </p>        
+        <p class="instruction">Se upp så att du inte krockar med ormarna eller trädstammarna!</p>
+    </div>    
+
+    <!-- Spelarea renderad i game.js -->
+
+    <div class="knappar">
+        <button onclick="moveleft()">Vänster</button>
+        <button onclick="moveup()">Upp</button>
+        <button onclick="movedown()">Ner</button>
+        <button onclick="moveright()">Höger</button>
+        <button class="stopp" onclick="stopMove()">Stoppa</button>
+        <button class="reset" onclick="restart()">Starta om spelet</button>
+    </div>
+
+    <footer>
+        <p>Skapat av Erica Hsu ~ oktober 2018</p>
+    </footer>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
